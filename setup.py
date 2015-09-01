@@ -18,7 +18,7 @@ setup(
     name = "multiprs",
     version = "0.1",
     author = "Florian Kuhn",
-    author_email = "andrewjcarter@gmail.com",
+    author_email = "kuhn@ids-mannheim.de",
     description = ("tagging and metadata alignment for multilit"),
     license = "MIT",
     keywords = "tagging parsing corpus",
@@ -30,4 +30,9 @@ setup(
         "Topic :: Utilities",
         "License :: OSI Approved :: MIT License",
     ],
+    install_requires=install_requires,
+    entry_points={
+        'console_scripts':
+            ['multiprs=multiprs:main']
+    }
 )
