@@ -1,9 +1,6 @@
-__author__ = 'kuhn'
-
-
-from lxml import etree
 import logging
 import os
+from lxml import etree
 
 XML_PARSER = etree.XMLParser()
 
