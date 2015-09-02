@@ -14,17 +14,17 @@ import corpusMethods
 
 
 
-#import generic modules
-#import etree
+# import generic modules
+# import etree
 from lxml import etree
 
 ###########
-#*MAIN BODY#
+# *MAIN BODY#
 ###########
-#1. read command line paraer
+# 1. read command line paraer
 directory = None
 tmpdir = "pos"
-#a local output directory
+# a local output directory
 try:
     directory = sys.argv[1]
     corpusdir = sys.argv[2]

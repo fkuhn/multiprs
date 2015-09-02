@@ -9,13 +9,6 @@
 
 
 
-
-
-
-
-
-
-
 ***HOW TO CREATE A TRAINING INPUT FILE FROM ANNOTATED MULTILIT EXMARALDA FILES***
 
 1. createTrainInputFile.py <annotated-exma-docs> #extracts student verbal tiers 
