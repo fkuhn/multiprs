@@ -5,9 +5,19 @@ from lxml import etree
 XML_PARSER = etree.XMLParser()
 
 
+def write_meta2exma(corpuspath):
+    """
+    writes metadata of a speaker to all
+    corresponding exmaralda files in a directory
+    :return:
+    """
+    pass
+
+
 def extract_v_student(documenttree):
     """
-    :param document:
+    :param documenttree: etree object
+    :returns vtier: verbal exmaralda tier
     """
     vtier = None
     for element in documenttree.iter('tier'):
@@ -16,10 +26,31 @@ def extract_v_student(documenttree):
     return vtier
 
 
+def timestamp_token_tupler(verbaltier):
+    """
+    takes an exmaralda verbal tier and returns a
+    list of (<timestamp>, token) tuples.
+    :param verbaltier: list
+    :returns timed_vlist: list
+    """
+    timed_vlist = list()
+
+    for velem in verbaltier:
+        if velem is not None:
+            try:
+                timed_vlist.append(('<' + velem.get('start') + ' ' + velem.get('end') + '>' + '\t',
+                                        unicode(velem.text) + '\n'))
+            except TypeError:
+
+                print velem + " is not valid"
+                continue
+    return timed_vlist
+
+
 class ExmaIterator(object):
     """
     exmaralda file iterator
-    Each parsed document is represented by a (filename, list of sentences) tuple.
+    takes an exmaralda source folder and returns an
     """
     def __init__(self, corpus_path):
         self.corpus_path = os.path.abspath(corpus_path)
@@ -36,4 +67,9 @@ class ExmaIterator(object):
         except AssertionError:
             logging.error('Assertion Error. No Root: ' + file_name)
             return
-        return file_name, extract_v_student(tree)
+
+        vtier = extract_v_student(tree)
+
+        return file_name, timestamp_token_tupler(vtier)
+
+
