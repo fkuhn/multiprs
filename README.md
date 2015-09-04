@@ -1,6 +1,14 @@
 # Multiprs 
 
-this package....
+Multiprs is a command-line toolkit for pos-tagging and meta-data enrichment of exmaralda-files.
+
+## Installation
+
+sudo setup.py install 
+
+## How To 
+wip
+
 
 ## License
 
