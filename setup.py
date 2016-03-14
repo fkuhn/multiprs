@@ -15,9 +15,9 @@ install_requires = [
     'pyYaml', 'parserator'
     ]
 setup(
-    name = "multiprs",
-    version = "0.1",
-    author = "Florian Kuhn",
+    name="multiprs",
+    version="0.2",
+    author="Florian Kuhn",
     author_email = "kuhn@ids-mannheim.de",
     description = ("tagging and metadata alignment for multilit"),
     license = "MIT",
