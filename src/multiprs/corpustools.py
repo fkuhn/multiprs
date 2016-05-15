@@ -73,3 +73,28 @@ class ExmaIterator(object):
         return file_name, timestamp_token_tupler(vtier)
 
 
+class CorpusIterator(object):
+    """
+    exmaralda file iterator
+    takes an exmaralda source folder and returns an
+    """
+    def __init__(self, corpus_path):
+        self.corpus_path = os.path.abspath(corpus_path)
+        self.file_names = iter(os.listdir(self.corpus_path))
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        file_name = self.file_names.next()
+
+        try:
+            tree = etree.parse(os.path.join(self.corpus_path, file_name), parser=XML_PARSER)
+        except AssertionError:
+            logging.error('Assertion Error. No Root: ' + file_name)
+            return
+
+        vtier = extract_v_student(tree)
+
+        return file_name, tree
+
