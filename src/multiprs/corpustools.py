@@ -25,6 +25,16 @@ def extract_v_student(documenttree):
             vtier = element
     return vtier
 
+def extract_pos_student(documenttree):
+	"""
+	:param documenttree: etree object
+	:returns postier exmaralda tier
+	"""
+	postier = None
+	for element in documenttree.iter('tier'):
+		if len(element.get('display-name').split()[0]) >= 3 and element.get('category') == 'POS':
+			postier = element
+	return postier
 
 def timestamp_token_tupler(verbaltier):
     """
@@ -39,7 +49,7 @@ def timestamp_token_tupler(verbaltier):
         if velem is not None:
             try:
                 timed_vlist.append(('<' + velem.get('start') + ' ' + velem.get('end') + '>' + '\t',
-                                        unicode(velem.text) + '\n'))
+                                        unicode(velem.text)))
             except TypeError:
 
                 print velem + " is not valid"
@@ -47,7 +57,7 @@ def timestamp_token_tupler(verbaltier):
     return timed_vlist
 
 
-class ExmaIterator(object):
+class ExmaTimeStampTokenIterator(object):
     """
     exmaralda file iterator
     takes an exmaralda source folder and returns an
@@ -73,10 +83,15 @@ class ExmaIterator(object):
         return file_name, timestamp_token_tupler(vtier)
 
 
+
+
+
+
 class CorpusIterator(object):
     """
     exmaralda file iterator
-    takes an exmaralda source folder and returns an
+    takes an exmaralda source folder and returns
+    filename and elementree
     """
     def __init__(self, corpus_path):
         self.corpus_path = os.path.abspath(corpus_path)
@@ -98,3 +113,57 @@ class CorpusIterator(object):
 
         return file_name, tree
 
+class CorpusIteratorVTier(object):
+    """
+    exmaralda file iterator
+    takes an exmaralda source folder and returns
+    the student's verbal tier of the file parsed as 
+    etree element.
+    """
+    def __init__(self, corpus_path):
+        self.corpus_path = os.path.abspath(corpus_path)
+        self.file_names = iter(os.listdir(self.corpus_path))
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        file_name = self.file_names.next()
+
+        try:
+            tree = etree.parse(os.path.join(self.corpus_path, file_name), parser=XML_PARSER)
+        except AssertionError:
+            logging.error('Assertion Error. No Root: ' + file_name)
+            return
+
+        vtier = extract_v_student(tree)
+
+        return file_name, vtier
+
+class ExmaPOSTokenIterator(object):
+    """
+    exmaralda file iterator
+    takes an exmaralda source folder and returns a filename and all 
+    student vtier POS, TOKEN tuples per file
+    """
+    def __init__(self, corpus_path):
+        self.corpus_path = os.path.abspath(corpus_path)
+        self.file_names = iter(os.listdir(self.corpus_path))
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        file_name = self.file_names.next()
+
+        try:
+            tree = etree.parse(os.path.join(self.corpus_path, file_name), parser=XML_PARSER)
+        except AssertionError:
+            logging.error('Assertion Error. No Root: ' + file_name)
+            return
+
+        vtier = extract_v_student(tree)
+        postier = extract_pos_student(tree)
+
+        return file_name, timestamp_token_tupler(vtier), timestamp_token_tupler(postier)
+	
