@@ -3,6 +3,7 @@ import xlrd
 from lxml import etree
 import os
 import corpustools
+import logging
 
 
 class MetaTableSpeakers(object):
@@ -60,22 +61,43 @@ class MetaTableSpeakers(object):
             speakersdata.update(speaker)
         return speakersdata
 
-    def insert_metadata(self, corpuspath):
+    def insert_metadata(self, corpuspath, outputpath):
         """
         inserts matching metadata sets into all exmaralda files of a given directory
         :param corpuspath: a path to a directoy w/ a collection of exb files
-        :return:
+        :return: list of modified etree objects
         """
-        # corpuspath = os.path.abspath(corpuspath)
-        filelist = os.listdir(corpuspath)
-        exmafiles = corpustools.CorpusIterator(corpuspath)
+        if os.path.isdir(os.path.abspath(outputpath)) and os.path.isdir(os.path.abspath(corpuspath)):
+
+            # corpuspath = os.path.abspath(corpuspath)
+            filelist = os.listdir(corpuspath)
+            exmafiles = corpustools.CorpusIterator(corpuspath)
+            modfiles = []
+            for speaker in self.studspeakers.iterkeys():
+
+                for exmafilename, exmatree in exmafiles:
+
+                    infile_speakers = exmatree.xpath('/basic-transcription/head/speakertable/speaker')
+
+                    for infile_speaker in infile_speakers:
+                        if infile_speaker.find('abbreviation').text == speaker:
+
+                            # enter data of speaker attribute to infile_spaker
+                            infile_spk_info = infile_speaker.find("ud-speaker-information")
+                            for attr in self.studspeakers.get(speaker).iteritems():
+                                # iterate of tuples of key,values
+                                udinfo = etree.SubElement(infile_spk_info, "ud-information")
+                                udinfo.set("attribute-name", attr[0])
+                                udinfo.text = attr[1]
+                    modfiles.append(exmatree)
+            return modfiles
 
 
-        for speaker in self.studspeakers:
-            for exmafilename, exmatree in exmafiles:
-                speakers = exmatree.xpath('/basic-transcription/head/speakertable/speaker')
-                for speaker in speakers:
-                    pass
+
+
+
+
+
 
 
 #class Comafile:
