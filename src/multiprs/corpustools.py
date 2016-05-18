@@ -3,7 +3,8 @@ import os
 from lxml import etree
 
 XML_PARSER = etree.XMLParser()
-
+TAB = '\t'
+LBREAK = '\n'
 
 def write_meta2exma(corpuspath):
     """
@@ -24,17 +25,18 @@ def extract_v_student(documenttree):
         if len(element.get('display-name').split()[0]) >= 3 and element.get('category') == 'v':
             vtier = element
     return vtier
-
+    
 def extract_pos_student(documenttree):
-	"""
-	:param documenttree: etree object
-	:returns postier exmaralda tier
-	"""
-	postier = None
-	for element in documenttree.iter('tier'):
-		if len(element.get('display-name').split()[0]) >= 3 and element.get('category') == 'POS':
-			postier = element
-	return postier
+    """
+    :param documenttree: etree object
+    :returns postier exmaralda tier
+    """
+    postier = None
+    for element in documenttree.iter('tier'):
+        if len(element.get('display-name').split()[0]) >= 3 and element.get('category') == 'POS':
+            postier = element
+    
+    return postier
 
 def timestamp_token_tupler(verbaltier):
     """
@@ -81,10 +83,6 @@ class ExmaTimeStampTokenIterator(object):
         vtier = extract_v_student(tree)
 
         return file_name, timestamp_token_tupler(vtier)
-
-
-
-
 
 
 class CorpusIterator(object):
@@ -140,7 +138,7 @@ class CorpusIteratorVTier(object):
 
         return file_name, vtier
 
-class ExmaPOSTokenIterator(object):
+class ExmaTokenPOSIterator(object):
     """
     exmaralda file iterator
     takes an exmaralda source folder and returns a filename and all 
@@ -164,6 +162,34 @@ class ExmaPOSTokenIterator(object):
 
         vtier = extract_v_student(tree)
         postier = extract_pos_student(tree)
-
+        
         return file_name, timestamp_token_tupler(vtier), timestamp_token_tupler(postier)
-	
+        
+
+class ExmaTrainData(object):
+    """
+    Training Data of a directory
+    """
+    
+    def __init__(self, train_data_path):
+        self.train_path = os.path.abspath(train_data_path)
+        self.filecount = len(os.listdir(self.train_path))
+        self._tokenpositer = ExmaTokenPOSIterator(self.train_path)
+        self.text = self._prepare_train_data(self.train_path)
+        
+    def _prepare_train_data(self, datapath):
+        """
+        takes path to a directory of train data and returns 
+        a single plaintext file of token \t postag per line
+        """
+        data = list()
+        
+        for filename, tokens, poses in self._tokenpositer:
+			for tokenpos in tokens, poses:
+                data.append('{}{}{}{}'.format(token[1], TAB, pos[1], LBREAK))
+        textstring = ''.join(data)
+        
+        return textstring
+        
+        
+    
