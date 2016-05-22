@@ -1,3 +1,4 @@
+from __future__ import print_function, unicode_literals
 import xlrd
 # http://www.python-excel.org/
 from lxml import etree
@@ -16,7 +17,7 @@ class MetaTableSpeakers(object):
         self.labels = self.metasheet.row_values(0)
         self.studspeakers = self._find_speakers()
 
-    def get_speaker(self, sigle):
+    def get_speaker_metadata(self, sigle):
         """
         returns a dictionary of speaker attributes given a speaker sigle
         :param sigle: string
@@ -26,7 +27,6 @@ class MetaTableSpeakers(object):
             return self.studspeakers.get(sigle)
         else:
             return None
-
 
     def _find_speaker(self, spkname):
         """
@@ -52,8 +52,8 @@ class MetaTableSpeakers(object):
             speaker = {}
             speaker_row = self.metasheet.row_values(row_index)
 
-            #speaker_label = self.metasheet.cell(row_index, 0).value
-            #speaker_row = self.metasheet.row_values(row_index)
+            # speaker_label = self.metasheet.cell(row_index, 0).value
+            # speaker_row = self.metasheet.row_values(row_index)
             spk = {}
             for i in speaker_row:
                 spk.update({self.labels[speaker_row.index(i)]: i})
@@ -65,38 +65,38 @@ class MetaTableSpeakers(object):
         """
         inserts matching metadata sets into all exmaralda files of a given directory
         :param corpuspath: a path to a directoy w/ a collection of exb files
+        :param outputpath: path where the modified exb are written
+        :param debug: boolean. flag to generate debugging logging info
         :return: list of modified etree objects
         """
+
         if os.path.isdir(os.path.abspath(outputpath)) and os.path.isdir(os.path.abspath(corpuspath)):
 
             # corpuspath = os.path.abspath(corpuspath)
             filelist = os.listdir(corpuspath)
             exmafiles = corpustools.CorpusIterator(corpuspath)
             modfiles = []
-            for speaker in self.studspeakers.iterkeys():
 
-                for exmafilename, exmatree in exmafiles:
+            for exmafilename, exmatree in exmafiles:
 
-                    infile_speakers = exmatree.xpath('/basic-transcription/head/speakertable/speaker')
+                infile_speakers = exmatree.xpath('/basic-transcription/head/speakertable/speaker')
 
-                    for infile_speaker in infile_speakers:
-                        if infile_speaker.find('abbreviation').text == speaker:
+                for infile_speaker in infile_speakers:
 
-                            # enter data of speaker attribute to infile_spaker
-                            infile_spk_info = infile_speaker.find("ud-speaker-information")
-                            for attr in self.studspeakers.get(speaker).iteritems():
-                                # iterate of tuples of key,values
-                                udinfo = etree.SubElement(infile_spk_info, "ud-information")
-                                udinfo.set("attribute-name", attr[0])
-                                udinfo.text = attr[1]
-                    modfiles.append(exmatree)
-            return modfiles
+                    if len(infile_speaker.find('abbreviation').text) == 3:
+                        infile_speaker_metadata = self.get_speaker_metadata(infile_speaker.find('abbreviation').text)
+                        infile_spk_info = infile_speaker.find("ud-speaker-information")
 
+                        for key, value in infile_speaker_metadata.items():
 
-
-
-
-
+                            # iterate over tuples of key,values
+                            udinfo = etree.SubElement(infile_spk_info, "ud-information")
+                            udinfo.set("attribute-name", key)
+                            try:
+                                udinfo.text = value
+                            except UnicodeEncodeError:
+                                continue
+                exmatree.write(exmafilename)
 
 
 
