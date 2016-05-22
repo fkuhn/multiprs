@@ -4,7 +4,6 @@ import xlrd
 from lxml import etree
 import os
 import corpustools
-import logging
 
 
 class MetaTableSpeakers(object):
@@ -74,81 +73,27 @@ class MetaTableSpeakers(object):
 
             # corpuspath = os.path.abspath(corpuspath)
             filelist = os.listdir(corpuspath)
-            exmafiles = corpustools.CorpusIterator(corpuspath)
+            exmaiter = corpustools.CorpusIterator(corpuspath)
             modfiles = []
 
-            for exmafilename, exmatree in exmafiles:
-
+            for filename, exmatree in exmaiter:
                 infile_speakers = exmatree.xpath('/basic-transcription/head/speakertable/speaker')
-
                 for infile_speaker in infile_speakers:
-
-                    if len(infile_speaker.find('abbreviation').text) == 3:
-                        infile_speaker_metadata = self.get_speaker_metadata(infile_speaker.find('abbreviation').text)
-                        infile_spk_info = infile_speaker.find("ud-speaker-information")
-
-                        for key, value in infile_speaker_metadata.items():
-
+                    try:
+                        infile_speaker_label = infile_speaker.find("abbreviation").text
+                    except AttributeError:
+                        continue
+                    if self.get_speaker_metadata(infile_speaker_label):
+                        infile_speaker_data = self.get_speaker_metadata(infile_speaker_label)
+                        for key, value in infile_speaker_data.items():
                             # iterate over tuples of key,values
-                            udinfo = etree.SubElement(infile_spk_info, "ud-information")
+                            udspeaker = infile_speaker.find('ud-speaker-information')
+                            udinfo = etree.SubElement(udspeaker, "ud-information")
                             udinfo.set("attribute-name", key)
-                            try:
-                                udinfo.text = value
-                            except UnicodeEncodeError:
-                                continue
-                exmatree.write(exmafilename)
-
-
-
-#class Comafile:
-    ##<Speaker Id="SID5A1794D5-D320-86FC-9248-4D9BF8B8DE7D">
-    ## <Sigle>ALP</Sigle>
-    ## <Pseudo>ALP</Pseudo>
-    ##<Sex>male</Sex>
-    ##<Description>
-    ##<Key Name="id">SPK0</Key>
-    ##<Key Name="@abbreviation">ALP</Key>
-    ##<Key Name="id0">SPK1</Key>
-    ##</Description>
-    ## </Speaker>
-
-    #def __init__(self, cfile):
-
-        #self.cparse = etree.parse(cfile)
-        #self.transkription_name = self.cparse.find('transcription-name')
-
-    #def write_speaker_to_coma(self, spktuple):
-        #"""
-        #writes metadata dictionary of a speaker to comasurvey = xlrd.open_workbook(tablefile)
-
-        #"""
-        #for speaker in self.cparse.iter('Speaker'):
-            #try:
-                #if speaker.find('Sigle').text == spktuple[0]:
-                    ##write all metadata to description tag
-                    #desc = speaker.find('Description')
-
-                    #for i in spktuple[1].iteritems():
-                        #s = etree.SubElement(desc, 'Key', {'Name': i[0]})
-                        #s.text = str(i[1])
-            #except:
-                #continue
-        #return
-
-    #def write_xml(self, f):
-        #return self.cparse.write(f, encoding="utf-8")
-
-    #def speakers(self):
-
-        #sp = []
-
-        #for speaker in self.cparse.iter('Speaker'):
-            #try:
-                #if len(speaker.find('Sigle').text) == 3:
-                    #sp.append(speaker.find('Sigle').text)
-            #except:
-                #continue
-        #return sp
+                            udinfo.text = "{}".format(value)
+                output = etree.tostring(exmatree)
+                with open(os.path.join(outputpath, filename), 'w') as out:
+                    out.write(output)
 
 
 class Speaker:
@@ -202,24 +147,3 @@ def read_coma_file_speakers(cfile):
     comaf = etree.parse(cfile)
 
     return comaf
-
-#def add_coma_speaker_description(speaker):
-
-
-
-#MAIN
-#surv = read_table('Metadata/Fragebogen_SEK_14_3_2013.xls')
-
-#cm = Comafile('Coma/MultilitGer.coma')
-
-#sp = cm.speakers()
-
-#print sp
-#print "Number of Speakers: " + str(len(sp))
-
-#for person in sp:
-#    speak = find_speaker(person, surv.sheet_by_index(0))
-#    cm.write_speaker_to_coma(speak)
-
-#print cm.write_xml('MetaMultiGer.coma')
-
