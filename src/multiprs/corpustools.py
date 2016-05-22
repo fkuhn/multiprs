@@ -168,7 +168,8 @@ class ExmaTokenPOSIterator(object):
         vtier = extract_v_student(tree)
         postier = extract_pos_student(tree)
 
-        return file_name, zip(timestamp_token_tupler(vtier), timestamp_token_tupler(postier))
+        return file_name, timestamp_token_tupler(vtier), timestamp_token_tupler(postier)
+
 
 
 class ExmaTrainData(object):
