@@ -142,6 +142,7 @@ class CorpusIteratorVTier(object):
 
         return file_name, vtier
 
+
 class ExmaTokenPOSIterator(object):
     """
     exmaralda file iterator
@@ -167,7 +168,7 @@ class ExmaTokenPOSIterator(object):
         vtier = extract_v_student(tree)
         postier = extract_pos_student(tree)
 
-        return file_name, timestamp_token_tupler(vtier), timestamp_token_tupler(postier)
+        return file_name, zip(timestamp_token_tupler(vtier), timestamp_token_tupler(postier))
 
 
 class ExmaTrainData(object):
@@ -190,7 +191,7 @@ class ExmaTrainData(object):
 
         for filename, tokens, poses in self._tokenpositer:
             for tokenpos in tokens, poses:
-                data.append('{}{}{}{}'.format(token[1], TAB, pos[1], LBREAK))
+                data.append('{}{}{}{}'.format(tokenpos[1], TAB, tokenpos[1], LBREAK))
         textstring = ''.join(data)
 
         return textstring
