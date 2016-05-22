@@ -107,7 +107,6 @@ class Speaker:
         self.description_dictionary.update({k: v})
 
 
-#FUNCTIONS
 def find_speaker(spkname, surveysheet):
     """
     searches for a speaker and returns her/his metadata entry
@@ -120,17 +119,17 @@ def find_speaker(spkname, surveysheet):
             for i in labels:
                 spk.update({i: speaker_row[labels.index(i)]})
 
-            return (spkname, spk)
+            return spkname, spk
 
 
 def read_table(tablefile):
     """
     reads an metadata-excel table
     """
-    #read in a workbook from file
+    # read in a workbook from file
     survey = xlrd.open_workbook(tablefile)
 
-    #for sheet in survey.sheets():
+    #f or sheet in survey.sheets():
 
     #   print sheet
     #   print sheet.namesurvey = xlrd.open_workbook(tablefile)
