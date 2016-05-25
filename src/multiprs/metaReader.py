@@ -135,7 +135,7 @@ def read_table(tablefile):
     #   print sheet.namesurvey = xlrd.open_workbook(tablefile)
 
     #   print "Number of rows: "+str(sheet.nrows)
-    #   print "Number of columns: "+str(sheet.ncols)
+    #   print "Number of columns: "+str(sheet.https://www.google.de/search?client=ubuntu&channel=fs&q=phonetik&ie=utf-8&oe=utf-8&gfe_rd=cr&ei=5SQ8V5rIMayI8QeZ9KW4Agncols)
     return survey
 
 
