@@ -16,7 +16,7 @@ install_requires = [
     ]
 setup(
     name="multiprs",
-    version="0.2",
+    version="0.3",
     author="Florian Kuhn",
     author_email = "kuhn@ids-mannheim.de",
     description = ("tagging and metadata alignment for multilit"),
