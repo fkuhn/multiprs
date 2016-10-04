@@ -3,6 +3,7 @@ import logging
 import os
 from lxml import etree
 
+# constants definition
 XML_PARSER = etree.XMLParser()
 TAB = '\t'
 LBREAK = '\n'
@@ -196,6 +197,3 @@ class ExmaTrainData(object):
         textstring = ''.join(data)
 
         return textstring
-
-
-
