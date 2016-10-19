@@ -9,7 +9,7 @@ TAB = '\t'
 LBREAK = '\n'
 
 
-# logging.basicConfig(filename='../log/corpustools.log',level=logging.WARNING)
+logging.basicConfig(level=logging.WARNING)
 
 def write_meta2exma(corpuspath):
     """
@@ -209,8 +209,10 @@ def make_tier_tuple_list(resourcepath):
         ts_ptier = timestamp_token_tupler(ptier)
 
         if ts_ptier == None:
+            logging.warning('Skipping file...{} No pos tier parsed'.format(file_name))
             continue
         if ts_vtier == None:
+            logging.warning('Skipping file...{} No verbal tier parsed'.format(file_name))
             continue
 
         result = file_name, ts_vtier, ts_ptier
