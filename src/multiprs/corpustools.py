@@ -8,12 +8,8 @@ XML_PARSER = etree.XMLParser()
 TAB = '\t'
 LBREAK = '\n'
 
-
-<<<<<<< HEAD
-=======
 logging.basicConfig(level=logging.WARNING)
 
->>>>>>> 45d53fe... added logging output for missing tiers
 def write_meta2exma(corpuspath):
     """
     writes metadata of a speaker to all
@@ -178,8 +174,6 @@ class ExmaTokenPOSIterator(object):
 
 
 
-<<<<<<< HEAD
-=======
 def make_tier_tuple_list(resourcepath):
     """
     same funtionality liek ExmaTokenPOSIterator
@@ -217,9 +211,6 @@ def make_tier_tuple_list(resourcepath):
     return results
 
 
-
-
->>>>>>> 45d53fe... added logging output for missing tiers
 class ExmaTrainData(object):
     """
     Training Data of a directory
