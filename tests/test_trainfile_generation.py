@@ -6,6 +6,7 @@ import re
 import pytest
 import os
 
+# path for travis
 tdata = os.path.abspath("tests/tdata/")
 
 def test_traindata():
