@@ -12,8 +12,8 @@ install_requires = [
     # List your project dependencies here.
     # For more details, see:
     # http://packages.python.org/distribute/setuptools.html#declaring-dependencies
-    'pyYaml', 'lxml'
-    ]
+
+    'pyyaml', 'lxml', 'pytest']
 setup(
     name="multiprs",
     version="0.3",
