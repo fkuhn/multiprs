@@ -26,9 +26,8 @@ def test_v_tupels():
     :return:
     """
     traindata_iterator = corpustools.make_tier_tuple_list(tdata)
-    tlist = [(fname, v_tupels, pos_tupels) for fname, v_tupels, pos_tupels in traindata_iterator]
 
-    for fname, v_tupels, pos_tupels in tlist:
+    for fname, v_tupels, pos_tupels in traindata_iterator:
 
         assert len(v_tupels) > 1
         for tupel in v_tupels:
