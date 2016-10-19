@@ -7,8 +7,8 @@ import pytest
 import os
 
 # Path to directory with manually pos tagged exb files
-germanExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Traingsdaten DE/"
-englishExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Trainingsdaten EN/"
+germanExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Traingsdaten_DE/"
+englishExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Trainingsdaten_EN/"
 turkishExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Trainingsdaten_TR/Block1-5"
 # Path to directory to exb files without pos tags 
 
@@ -103,7 +103,7 @@ def test_german_traindata():
     this test runs to find non-parsed element-tiers in the exmaralda sources
     :return:
     """
-    traindata_iterator = corpustools.ExmaTokenPOSIterator(germanExmaraldaTrain)
+    traindata_iterator = corpustools.make_tier_tuple_list(germanExmaraldaTrain)
     for fname, token, pos in traindata_iterator:
         assert fname != None
         assert token != None
@@ -115,8 +115,10 @@ def test_english_traindata():
     this test runs to find non-parsed element-tiers in the exmaralda sources
     :return:
     """
-    traindata_iterator = corpustools.ExmaTokenPOSIterator(englishExmaraldaTrain)
-    assert hasattr(traindata_iterator, '__iter__')
+    traindata_iterator = corpustools.make_tier_tuple_list(englishExmaraldaTrain)
+
+    assert hasattr(traindata_iterator, '__iter__') == True
+
     for fname, token, pos in traindata_iterator:
         assert fname != None
         assert token != None
@@ -128,8 +130,10 @@ def test_german_v_tupels():
     Are all verbal tier tupels created without None values?
     :return:
     """
-    traindata_iterator = corpustools.ExmaTokenPOSIterator(germanExmaraldaTrain)
-    for fname, v_tupels, pos_tupels in traindata_iterator:
+    traindata_iterator = corpustools.make_tier_tuple_list(germanExmaraldaTrain)
+    tlist = [(fname, v_tupels, pos_tupels) for fname, v_tupels, pos_tupels in traindata_iterator]
+
+    for fname, v_tupels, pos_tupels in tlist:
 
         assert len(v_tupels) > 1
         for tupel in v_tupels:
@@ -144,8 +148,9 @@ def test_english_v_tupels():
     Are all verbal tier tupels created without None values?
     :return:
     """
-    traindata_iterator = corpustools.ExmaTokenPOSIterator(englishExmaraldaTrain)
-    for fname, v_tupels, pos_tupels in traindata_iterator:
+    traindata_iterator = corpustools.make_tier_tuple_list(englishExmaraldaTrain)
+    tlist = [(fname, v_tupels, pos_tupels) for fname, v_tupels, pos_tupels in traindata_iterator]
+    for fname, v_tupels, pos_tupels in tlist:
 
         assert len(v_tupels) > 1
         for tupel in v_tupels:
@@ -160,7 +165,7 @@ def test_german_pos_tupels():
     Are all pos tier tupels created without None values?
     :return:
     """
-    traindata_iterator = corpustools.ExmaTokenPOSIterator(germanExmaraldaTrain)
+    traindata_iterator = corpustools.make_tier_tuple_list(germanExmaraldaTrain)
     for fname, v_tupels, pos_tupels in traindata_iterator:
 
         assert len(pos_tupels) > 1
@@ -175,7 +180,7 @@ def test_english_pos_tupels():
     Are all pos tier tupels created without None values?
     :return:
     """
-    traindata_iterator = corpustools.ExmaTokenPOSIterator(englishExmaraldaTrain)
+    traindata_iterator = corpustools.make_tier_tuple_list(englishExmaraldaTrain)
     for fname, v_tupels, pos_tupels in traindata_iterator:
 
         assert len(pos_tupels) > 1
@@ -187,7 +192,7 @@ def test_english_pos_tupels():
 
 
 def test_german_tokenpos():
-    trdata = corpustools.ExmaTokenPOSIterator(germanExmaraldaTrain)
+    trdata = corpustools.make_tier_tuple_list(germanExmaraldaTrain)
     trfiles = {}
 
     # check if trdata is iterable
@@ -206,7 +211,7 @@ def test_german_tokenpos():
     assert len(trfiles) == counter
 
 def test_english_tokenpos():
-    trdata = corpustools.ExmaTokenPOSIterator(englishExmaraldaTrain)
+    trdata = corpustools.make_tier_tuple_list(englishExmaraldaTrain)
     trfiles = {}
 
     # check if trdata is iterable
@@ -223,10 +228,4 @@ def test_english_tokenpos():
         trfiles.update({fn: tp})
 
     assert len(trfiles) == counter
-
-
-
-# create_tagger_trainingfile(germanExmaraldaTrain, german_tt_trainfile)
-
-# assert create_tagger_trainingfile(englishExmaraldaTrain, english_tt_trainfile)
 
