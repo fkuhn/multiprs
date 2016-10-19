@@ -4,9 +4,7 @@ from multiprs import corpustools
 from lxml import etree
 import re
 import pytest
-import os
-
-<<<<<<< HEAD
+import ose
 # Path to directory with manually pos tagged exb files
 germanExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Traingsdaten DE/"
 englishExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Trainingsdaten EN/"
@@ -114,6 +112,9 @@ def test_german_traindata():
         assert token != None
         assert pos != None
 
+=======
+tdata = os.path.abspath("tdata/")
+>>>>>>> 433e440... corrected tesdata path refernce
 
 <<<<<<< HEAD
 def test_english_traindata():
