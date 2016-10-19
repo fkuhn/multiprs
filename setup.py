@@ -34,6 +34,6 @@ setup(
     install_requires=install_requires,
     entry_points={
         'console_scripts':
-            ['multiprs=multiprs:main']
+            ['multiprs=multiprs.multiprs:main']
     }
 )
