@@ -8,4 +8,4 @@ python:
 install:
   - python setup.py install
 # command to run tests
-script: pytest -v tests/test_trainfile_generation.py
+script: pytest
