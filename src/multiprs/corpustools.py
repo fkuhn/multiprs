@@ -9,6 +9,11 @@ TAB = '\t'
 LBREAK = '\n'
 
 
+<<<<<<< HEAD
+=======
+logging.basicConfig(level=logging.WARNING)
+
+>>>>>>> 45d53fe... added logging output for missing tiers
 def write_meta2exma(corpuspath):
     """
     writes metadata of a speaker to all
@@ -173,6 +178,48 @@ class ExmaTokenPOSIterator(object):
 
 
 
+<<<<<<< HEAD
+=======
+def make_tier_tuple_list(resourcepath):
+    """
+    same funtionality liek ExmaTokenPOSIterator
+    but with using a simple list-returning function
+    :param resourcepath:
+    :return:
+    """
+    corpus_path = os.path.abspath(resourcepath)
+    file_names = os.listdir(corpus_path)
+    results = list()
+    for file_name in file_names:
+        try:
+            tree = etree.parse(os.path.join(corpus_path, file_name), parser=XML_PARSER)
+        except AssertionError:
+            logging.error('Assertion Error. No Root: ' + file_name)
+
+        vtier = extract_v_student(tree)
+        ptier = extract_pos_student(tree)
+
+        # results.update({file_name: (timestamp_token_tupler(vtier), timestamp_token_tupler(ptier))})
+
+        ts_vtier = timestamp_token_tupler(vtier)
+        ts_ptier = timestamp_token_tupler(ptier)
+
+        if ts_ptier == None:
+            logging.warning('Skipping file...{} No pos tier parsed'.format(file_name))
+            continue
+        if ts_vtier == None:
+            logging.warning('Skipping file...{} No verbal tier parsed'.format(file_name))
+            continue
+
+        result = file_name, ts_vtier, ts_ptier
+        results.append(result)
+
+    return results
+
+
+
+
+>>>>>>> 45d53fe... added logging output for missing tiers
 class ExmaTrainData(object):
     """
     Training Data of a directory
