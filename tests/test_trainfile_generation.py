@@ -129,9 +129,12 @@ def test_english_traindata():
         assert token != None
         assert pos != None
 
+<<<<<<< HEAD
 
 def test_german_v_tupels():
 =======
+=======
+>>>>>>> dd99af6... reformatting
 def test_v_tupels():
 >>>>>>> 3480e95... reformatted test training file
     """
