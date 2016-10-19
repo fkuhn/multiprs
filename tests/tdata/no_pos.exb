@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (c) http://www.rrz.uni-hamburg.de/exmaralda -->
+<basic-transcription>
+<head>
+<meta-information><project-name>MULTILIT</project-name><transcription-name>CvO_12_SUA_en_we</transcription-name><referenced-file url=""/><ud-meta-information><ud-information attribute-name="Transkribend">GD</ud-information><ud-information attribute-name="Korrektur ">AJ</ud-information><ud-information attribute-name="Analyse">AJ</ud-information><ud-information attribute-name="Textualität">MD</ud-information><ud-information attribute-name="Korrektur2">AJ</ud-information></ud-meta-information><comment></comment><transcription-convention></transcription-convention></meta-information><speakertable><speaker id="SPK0">
+<abbreviation>SUA</abbreviation>
+<sex value="m"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+</speakertable></head>
+<basic-body>
+<common-timeline>
+<tli id="T0"/>
+<tli id="T1"/>
+<tli id="T2"/>
+<tli id="T3"/>
+<tli id="T4"/>
+<tli id="T5"/>
+<tli id="T6"/>
+<tli id="T7"/>
+<tli id="T8"/>
+<tli id="T9"/>
+<tli id="T10"/>
+<tli id="T11"/>
+<tli id="T12"/>
+<tli id="T13"/>
+<tli id="T14"/>
+<tli id="T15"/>
+<tli id="T16"/>
+<tli id="T17"/>
+<tli id="T18"/>
+<tli id="T19"/>
+</common-timeline>
+<tier id="TIE0" speaker="SPK0" category="v" type="t" display-name="SUA [v]"><event start="T0" end="T1">I </event>
+<event start="T1" end="T2">think </event>
+<event start="T2" end="T3">fighting </event>
+<event start="T3" end="T4">is </event>
+<event start="T4" end="T5">not </event>
+<event start="T5" end="T6">so </event>
+<event start="T6" end="T7">good </event>
+<event start="T7" end="T8">because </event>
+<event start="T8" end="T9">they </event>
+<event start="T9" end="T10">/ </event>
+<event start="T10" end="T11">hurt </event>
+<event start="T11" end="T12">each </event>
+<event start="T12" end="T13">other </event>
+<event start="T13" end="T14">and </event>
+<event start="T14" end="T15">than </event>
+<event start="T15" end="T16">they </event>
+<event start="T16" end="T17">are </event>
+<event start="T17" end="T18">sad </event>
+<event start="T18" end="T19">. </event>
+</tier><tier id="TIE1" category="%com" type="ud" display-name="[%com]"></tier></basic-body>
+</basic-transcription>

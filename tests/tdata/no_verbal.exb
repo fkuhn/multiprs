@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (c) http://www.rrz.uni-hamburg.de/exmaralda -->
+<basic-transcription>
+<head>
+<meta-information><project-name>MULTILIT</project-name><transcription-name>RKO_7_MEH_tr_oe</transcription-name><referenced-file url="../../../../Korpus 1.0/RKO/7/MEH/RKO_7_MEH_tr_oe.wav"/><referenced-file url="../../../../../Applications/C:/Users/Haks/Desktop/zipdatei_RKO_7/RKO_7_MEH_tr_oe.wav"/><ud-meta-information><ud-information attribute-name="Transkript">CKG</ud-information><ud-information attribute-name="Korrektur">MD</ud-information><ud-information attribute-name="Analyse">MD</ud-information><ud-information attribute-name="Textualität">MD</ud-information><ud-information attribute-name="Korrektur 2">MD</ud-information></ud-meta-information><comment></comment><transcription-convention></transcription-convention></meta-information><speakertable><speaker id="SPK0">
+<abbreviation>MD</abbreviation>
+<sex value="f"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK1">
+<abbreviation>MEH</abbreviation>
+<sex value="m"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+</speakertable></head>
+<basic-body>
+<common-timeline>
+<tli id="T0"/>
+<tli id="T45"/>
+<tli id="T44"/>
+<tli id="T43"/>
+<tli id="T42"/>
+<tli id="T41"/>
+<tli id="T40"/>
+<tli id="T39"/>
+<tli id="T38"/>
+<tli id="T37"/>
+<tli id="T36"/>
+<tli id="T35"/>
+<tli id="T34"/>
+<tli id="T33"/>
+<tli id="T32"/>
+<tli id="T131"/>
+<tli id="T16"/>
+<tli id="T30"/>
+<tli id="T29"/>
+<tli id="T28"/>
+<tli id="T27"/>
+<tli id="T26"/>
+<tli id="T25"/>
+<tli id="T24"/>
+<tli id="T23"/>
+<tli id="T22"/>
+<tli id="T21"/>
+<tli id="T20"/>
+<tli id="T19"/>
+<tli id="T18"/>
+<tli id="T17"/>
+<tli id="T15"/>
+<tli id="T63"/>
+<tli id="T14"/>
+<tli id="T13"/>
+<tli id="T12"/>
+<tli id="T11"/>
+<tli id="T10"/>
+<tli id="T9"/>
+<tli id="T8"/>
+<tli id="T7"/>
+<tli id="T6"/>
+<tli id="T5"/>
+<tli id="T4"/>
+<tli id="T3"/>
+<tli id="T2"/>
+<tli id="T62"/>
+<tli id="T61"/>
+<tli id="T60"/>
+<tli id="T59"/>
+<tli id="T58"/>
+<tli id="T57"/>
+<tli id="T56"/>
+<tli id="T55"/>
+<tli id="T54"/>
+<tli id="T53"/>
+<tli id="T52"/>
+<tli id="T51"/>
+<tli id="T137"/>
+<tli id="T50"/>
+<tli id="T69"/>
+<tli id="T49"/>
+<tli id="T48"/>
+<tli id="T47"/>
+<tli id="T46"/>
+<tli id="T71"/>
+<tli id="T70"/>
+<tli id="T68"/>
+<tli id="T67"/>
+<tli id="T138"/>
+<tli id="T139"/>
+<tli id="T66"/>
+<tli id="T65"/>
+<tli id="T64"/>
+<tli id="T140"/>
+<tli id="T80"/>
+<tli id="T31"/>
+<tli id="T79"/>
+<tli id="T78"/>
+<tli id="T77"/>
+<tli id="T76"/>
+<tli id="T141"/>
+<tli id="T75"/>
+<tli id="T74"/>
+<tli id="T73"/>
+<tli id="T72"/>
+<tli id="T87"/>
+<tli id="T86"/>
+<tli id="T85"/>
+<tli id="T84"/>
+<tli id="T83"/>
+<tli id="T82"/>
+<tli id="T81"/>
+<tli id="T102"/>
+<tli id="T142"/>
+<tli id="T101"/>
+<tli id="T100"/>
+<tli id="T99"/>
+<tli id="T143"/>
+<tli id="T98"/>
+<tli id="T97"/>
+<tli id="T96"/>
+<tli id="T144"/>
+<tli id="T95"/>
+<tli id="T94"/>
+<tli id="T93"/>
+<tli id="T92"/>
+<tli id="T91"/>
+<tli id="T90"/>
+<tli id="T89"/>
+<tli id="T88"/>
+<tli id="T119"/>
+<tli id="T118"/>
+<tli id="T117"/>
+<tli id="T116"/>
+<tli id="T115"/>
+<tli id="T114"/>
+<tli id="T113"/>
+<tli id="T145"/>
+<tli id="T112"/>
+<tli id="T147"/>
+<tli id="T146"/>
+<tli id="T111"/>
+<tli id="T110"/>
+<tli id="T109"/>
+<tli id="T108"/>
+<tli id="T107"/>
+<tli id="T106"/>
+<tli id="T105"/>
+<tli id="T104"/>
+<tli id="T103"/>
+<tli id="T130"/>
+<tli id="T129"/>
+<tli id="T148"/>
+<tli id="T128"/>
+<tli id="T127"/>
+<tli id="T149"/>
+<tli id="T126"/>
+<tli id="T125"/>
+<tli id="T124"/>
+<tli id="T123"/>
+<tli id="T122"/>
+<tli id="T121"/>
+<tli id="T120"/>
+<tli id="T136"/>
+<tli id="T135"/>
+<tli id="T1"/>
+</common-timeline>
+<tier id="TIE1" speaker="SPK0" category="v" type="t" display-name="MD [v]"><event start="T0" end="T45">Projekt </event>
+<event start="T45" end="T44">Multilit </event>
+<event start="T44" end="T43">RobertKochOberschule </event>
+<event start="T43" end="T42">fünfundzwanzigster </event>
+<event start="T42" end="T41">sechster </event>
+<event start="T41" end="T40">zweitausendzehn </event>
+<event start="T40" end="T39">siebte </event>
+<event start="T39" end="T38">Klasse </event>
+<event start="T38" end="T37">Interviewerin </event>
+<event start="T37" end="T36">Meral </event>
+<event start="T36" end="T35">Dollnick </event>
+<event start="T35" end="T34">Aufnahme </event>
+<event start="T34" end="T33">von </event>
+<event start="T33" end="T32">Schüler </event>
+<event start="T16" end="T30">mündliche </event>
+<event start="T30" end="T29">Erörterung </event>
+<event start="T29" end="T28">auf </event>
+<event start="T28" end="T27">Türkisch </event>
+<event start="T27" end="T26">. </event>
+<event start="T26" end="T25">Metin </event>
+<event start="T25" end="T24">biraz </event>
+<event start="T24" end="T23">önceki </event>
+<event start="T23" end="T22">video </event>
+<event start="T22" end="T21">filminde </event>
+<event start="T21" end="T20">okul </event>
+<event start="T20" end="T19">yaşamında </event>
+<event start="T19" end="T18">yaşanabilen </event>
+<event start="T18" end="T17">değişik </event>
+<event start="T17" end="T15">şekillerdeki </event>
+<event start="T15" end="T63">sorunlar </event>
+<event start="T63" end="T14">em </event>
+<event start="T14" end="T13">gösterildi </event>
+<event start="T13" end="T12">, </event>
+<event start="T12" end="T11">onları </event>
+<event start="T11" end="T10">gördün </event>
+<event start="T10" end="T9">. </event>
+<event start="T9" end="T8">Şimdi </event>
+<event start="T8" end="T7">senden </event>
+<event start="T7" end="T6">sanki </event>
+<event start="T6" end="T5">sınıf </event>
+<event start="T5" end="T4">önündeymişsin </event>
+<event start="T4" end="T3">gibi </event>
+<event start="T3" end="T2">düşüncelerini </event>
+<event start="T2" end="T62">anlatmanı </event>
+<event start="T62" end="T61">ve </event>
+<event start="T61" end="T60">konu </event>
+<event start="T60" end="T59">hakkındaki </event>
+<event start="T59" end="T58">görüşlerini </event>
+<event start="T58" end="T57">açıklamanı </event>
+<event start="T57" end="T56">istiyoruz </event>
+<event start="T56" end="T55">. </event>
+<event start="T122" end="T121">Peki </event>
+<event start="T121" end="T120">. </event>
+<event start="T120" end="T136">Teşekkürler </event>
+<event start="T136" end="T135">Metin </event>
+<event start="T135" end="T1">. </event>
+</tier><tier id="TIE2" speaker="SPK1" category="V" type="t" display-name="MEH [V]"><event start="T32" end="T131">Metin </event>
+<event start="T131" end="T16">Karasu </event>
+<event start="T56" end="T55">Tamam </event>
+<event start="T55" end="T54">. </event>
+<event start="T54" end="T53">Ya </event>
+<event start="T53" end="T52">çok </event>
+<event start="T52" end="T51">kötüydü </event>
+<event start="T51" end="T137">. </event>
+<event start="T137" end="T50">• </event>
+<event start="T50" end="T69">Hem </event>
+<event start="T69" end="T49">de </event>
+<event start="T49" end="T48">insan </event>
+<event start="T48" end="T47">arkadaş </event>
+<event start="T47" end="T46">olma </event>
+<event start="T46" end="T71">gerek </event>
+<event start="T71" end="T70">değilkine </event>
+<event start="T70" end="T68"><![CDATA[ ]]></event>
+<event start="T68" end="T67">, </event>
+<event start="T67" end="T138">öbürsüne </event>
+<event start="T138" end="T139">• • </event>
+<event start="T139" end="T66">yani </event>
+<event start="T66" end="T65">el </event>
+<event start="T65" end="T64">vermekte </event>
+<event start="T64" end="T140">. </event>
+<event start="T140" end="T80">• </event>
+<event start="T80" end="T31">ya </event>
+<event start="T31" end="T79">da </event>
+<event start="T79" end="T78">merhaba </event>
+<event start="T78" end="T77">demekte </event>
+<event start="T77" end="T76">. </event>
+<event start="T76" end="T141">İnsan </event>
+<event start="T141" end="T75">• </event>
+<event start="T75" end="T74">bi </event>
+<event start="T74" end="T73">el </event>
+<event start="T73" end="T72">verir </event>
+<event start="T72" end="T87">tamam </event>
+<event start="T87" end="T86">, </event>
+<event start="T86" end="T85">ama </event>
+<event start="T85" end="T84">insan </event>
+<event start="T84" end="T83">arkadaş </event>
+<event start="T83" end="T82">olmayı </event>
+<event start="T82" end="T81">gerek </event>
+<event start="T81" end="T102">değil </event>
+<event start="T102" end="T142">. </event>
+<event start="T142" end="T101">• </event>
+<event start="T101" end="T100">Hem </event>
+<event start="T100" end="T99">de </event>
+<event start="T99" end="T143">em </event>
+<event start="T143" end="T98">• • </event>
+<event start="T98" end="T97">daha </event>
+<event start="T97" end="T96">iyi </event>
+<event start="T96" end="T144">olan </event>
+<event start="T144" end="T95">• </event>
+<event start="T95" end="T94">okulda </event>
+<event start="T94" end="T93">insan </event>
+<event start="T93" end="T92">kavga </event>
+<event start="T92" end="T91">etmez </event>
+<event start="T91" end="T90">, </event>
+<event start="T90" end="T89">çünkü </event>
+<event start="T89" end="T88">orda </event>
+<event start="T88" end="T119">Tadel </event>
+<event start="T119" end="T118">, </event>
+<event start="T118" end="T117">öyle </event>
+<event start="T117" end="T116">bir </event>
+<event start="T116" end="T115">şey </event>
+<event start="T115" end="T114">, </event>
+<event start="T114" end="T113">alabilirsin </event>
+<event start="T113" end="T145">. </event>
+<event start="T145" end="T112">• • </event>
+<event start="T112" end="T147">Ve </event>
+<event start="T147" end="T146">• • </event>
+<event start="T146" end="T111">mh </event>
+<event start="T111" end="T110">tek </event>
+<event start="T110" end="T109">birisi </event>
+<event start="T109" end="T108">zeki </event>
+<event start="T108" end="T107">diye </event>
+<event start="T107" end="T106">hemen </event>
+<event start="T106" end="T105">ondan </event>
+<event start="T105" end="T104">arkadaş </event>
+<event start="T104" end="T103">olman </event>
+<event start="T103" end="T130">gerek </event>
+<event start="T130" end="T129">değil </event>
+<event start="T129" end="T148">. </event>
+<event start="T148" end="T128">((2,0s)) </event>
+<event start="T128" end="T127">Evet </event>
+<event start="T127" end="T149">. </event>
+<event start="T149" end="T126">• • • </event>
+<event start="T126" end="T125">Ve </event>
+<event start="T125" end="T124">(unverständlich) </event>
+<event start="T124" end="T123">. </event>
+</tier><tier id="TIE6" category="%com" type="a" display-name="[%com]"><event start="T66" end="T140">Evtl. Transfer: "die Hand geben" </event>
+<event start="T90" end="T113">Evtl. Transfer: "Weil du da so (et)was wie Tadel bekommen kannst." </event>
+</tier><tier id="TIE3" speaker="SPK1" category="ZH1" type="ud" display-name="MEH [ZH1]"><event start="T56" end="T55">Tamam </event>
+<event start="T55" end="T54">. </event>
+<event start="T54" end="T53">Ya </event>
+<event start="T53" end="T52">çok </event>
+<event start="T52" end="T51">kötüydü </event>
+<event start="T51" end="T137">. </event>
+<event start="T137" end="T50">• </event>
+<event start="T50" end="T69">Hem </event>
+<event start="T69" end="T49">de </event>
+<event start="T49" end="T48">insanın </event>
+<event start="T48" end="T47">arkadaş </event>
+<event start="T47" end="T46">olması </event>
+<event start="T46" end="T70">gerekmiyor </event>
+<event start="T70" end="T68">ki </event>
+<event start="T68" end="T67">, </event>
+<event start="T67" end="T138">öbürüne </event>
+<event start="T139" end="T66">yani </event>
+<event start="T66" end="T65">el </event>
+<event start="T65" end="T64">vermekte </event>
+<event start="T64" end="T140">. </event>
+<event start="T80" end="T31">ya </event>
+<event start="T31" end="T79">da </event>
+<event start="T79" end="T78">merhaba </event>
+<event start="T78" end="T77">demekte </event>
+<event start="T77" end="T76">. </event>
+<event start="T76" end="T141">İnsan </event>
+<event start="T75" end="T74">bir </event>
+<event start="T74" end="T73">el </event>
+<event start="T73" end="T72">verir </event>
+<event start="T72" end="T87">tamam </event>
+<event start="T87" end="T86">, </event>
+<event start="T86" end="T85">ama </event>
+<event start="T85" end="T84">insanın </event>
+<event start="T84" end="T83">arkadaş </event>
+<event start="T83" end="T82">olması </event>
+<event start="T82" end="T102">gerekmez </event>
+<event start="T102" end="T142">. </event>
+<event start="T142" end="T101">• </event>
+<event start="T101" end="T100">Hem </event>
+<event start="T100" end="T99">de </event>
+<event start="T98" end="T97">daha </event>
+<event start="T97" end="T96">iyi </event>
+<event start="T96" end="T144">olan </event>
+<event start="T95" end="T94">okulda </event>
+<event start="T94" end="T93">insanin </event>
+<event start="T93" end="T92">kavga </event>
+<event start="T92" end="T91">etmemesidir </event>
+<event start="T91" end="T90">, </event>
+<event start="T90" end="T89">çünkü </event>
+<event start="T89" end="T88">orada </event>
+<event start="T88" end="T119">ceza </event>
+<event start="T119" end="T118">, </event>
+<event start="T118" end="T117">gibi </event>
+<event start="T117" end="T116">bir </event>
+<event start="T116" end="T115">şey </event>
+<event start="T114" end="T113">alabilirsin </event>
+<event start="T113" end="T145">. </event>
+<event start="T112" end="T147">Ve </event>
+<event start="T111" end="T110">sadece </event>
+<event start="T110" end="T109">birisi </event>
+<event start="T109" end="T108">zeki </event>
+<event start="T108" end="T107">diye </event>
+<event start="T107" end="T106">hemen </event>
+<event start="T106" end="T105">onunla </event>
+<event start="T105" end="T104">arkadaş </event>
+<event start="T104" end="T103">olman </event>
+<event start="T103" end="T129">gerekmiyor </event>
+<event start="T129" end="T148">. </event>
+<event start="T148" end="T128">((2,0s)) </event>
+<event start="T128" end="T127">Evet </event>
+<event start="T127" end="T149">. </event>
+<event start="T149" end="T126">• • • </event>
+<event start="T126" end="T125">Ve </event>
+<event start="T125" end="T124">(unverständlich) </event>
+<event start="T124" end="T123">. </event>
+</tier><tier id="TIE8" speaker="SPK1" category="ZH2" type="a" display-name="MEH [ZH2]"><event start="T66" end="T65">selam </event>
+<event start="T65" end="T64">vermekte </event>
+<event start="T74" end="T73">selam </event>
+<event start="T73" end="T72">verir </event>
+<event start="T90" end="T89">Yoksa </event>
+<event start="T89" end="T113">cezalandirilabilirsin. </event>
+</tier><tier id="TIE7" speaker="SPK1" category="POS" type="a" display-name="MEH [POS]"><event start="T54" end="T53">CO </event>
+<event start="T53" end="T52">ADV </event>
+<event start="T52" end="T51">ADJDVCOP </event>
+<event start="T50" end="T49">KON </event>
+<event start="T49" end="T48">NN </event>
+<event start="T48" end="T47">NN </event>
+<event start="T47" end="T46">VAINF </event>
+<event start="T46" end="T71">ADJD </event>
+<event start="T71" end="T70">PNEG </event>
+<event start="T70" end="T68">CO </event>
+<event start="T67" end="T138">PIS </event>
+<event start="T139" end="T66">CO </event>
+<event start="T66" end="T64">VVCOFIN </event>
+<event start="T80" end="T79">KON </event>
+<event start="T79" end="T77">VCOFIN </event>
+<event start="T76" end="T141">NN </event>
+<event start="T75" end="T74">CO </event>
+<event start="T74" end="T72">VCOFIN </event>
+<event start="T72" end="T87">CO </event>
+<event start="T86" end="T85">KON </event>
+<event start="T85" end="T84">NN </event>
+<event start="T84" end="T82">VCOINF </event>
+<event start="T82" end="T81">ADJD </event>
+<event start="T81" end="T102">PNEG </event>
+<event start="T101" end="T99">KON </event>
+<event start="T99" end="T143">CO </event>
+<event start="T98" end="T97">PTKA </event>
+<event start="T97" end="T96">ADJA </event>
+<event start="T96" end="T144">VAINF </event>
+<event start="T95" end="T94">NN </event>
+<event start="T94" end="T93">NN </event>
+<event start="T93" end="T91">VCOFIN </event>
+<event start="T90" end="T89">KON </event>
+<event start="T89" end="T88">ADVP </event>
+<event start="T88" end="T119">NNAMTD </event>
+<event start="T118" end="T117">PIAT </event>
+<event start="T117" end="T116">ART </event>
+<event start="T116" end="T115">NN </event>
+<event start="T114" end="T113">VVFIN </event>
+<event start="T112" end="T147">KON </event>
+<event start="T111" end="T110">PTKA </event>
+<event start="T110" end="T109">PIS </event>
+<event start="T109" end="T108">ADJDCOP </event>
+<event start="T108" end="T107">KON </event>
+<event start="T107" end="T106">ADV </event>
+<event start="T106" end="T105">PPER3APPO </event>
+<event start="T105" end="T104">NN </event>
+<event start="T104" end="T103">VAINF </event>
+<event start="T103" end="T130">ADJD </event>
+<event start="T130" end="T129">PNEG </event>
+<event start="T128" end="T127">CO </event>
+<event start="T126" end="T125">CO </event>
+</tier><tier id="TIE5" speaker="SPK1" category="NP" type="a" display-name="MEH [NP]"><event start="T49" end="T48">NPO</event>
+<event start="T48" end="T47"> NPO</event>
+<event start="T67" end="T138">NPO </event>
+<event start="T76" end="T141">NPO </event>
+<event start="T85" end="T84">NPO </event>
+<event start="T98" end="T144">NPPRTANEXP </event>
+<event start="T95" end="T94">NPO </event>
+<event start="T94" end="T93">NPO </event>
+<event start="T88" end="T119">NPOAMTD </event>
+<event start="T118" end="T115">NPO </event>
+<event start="T110" end="T109">NPO</event>
+<event start="T105" end="T104">NPO </event>
+</tier><tier id="TIE12" speaker="SPK1" category="MORPH" type="a" display-name="MEH [MORPH]"><event start="T114" end="T113">PSB </event>
+</tier><tier id="TIE9" speaker="SPK1" category="SYN1" type="a" display-name="MEH [SYN1]"><event start="T54" end="T51">MCDZ </event>
+<event start="T50" end="T70">MCDS+2 </event>
+<event start="T67" end="T140">MCDZ </event>
+<event start="T80" end="T76">MCDZ </event>
+<event start="T76" end="T87">MCDS </event>
+<event start="T86" end="T102">MCDS+2 </event>
+<event start="T101" end="T91">MCDS+2 </event>
+<event start="T90" end="T113">MCDZ </event>
+<event start="T112" end="T129">MCDZ+2 </event>
+</tier><tier id="TIE10" speaker="SPK1" category="SYN2" type="a" display-name="MEH [SYN2]"><event start="T49" end="T46">SCcomp </event>
+<event start="T84" end="T82">SCcomp </event>
+<event start="T98" end="T144">SCrel </event>
+<event start="T112" end="T107">SCdiye </event>
+<event start="T107" end="T103">SCcomp </event>
+</tier><tier id="TIE13" speaker="SPK1" category="ERRMORPH" type="a" display-name="MEH [ERRMORPH]"><event start="T49" end="T48">N </event>
+<event start="T47" end="T46">V</event>
+<event start="T85" end="T84">N </event>
+<event start="T83" end="T82">V </event>
+<event start="T94" end="T93">N </event>
+<event start="T93" end="T91">V </event>
+<event start="T106" end="T105">N </event>
+</tier><tier id="TIE4" speaker="SPK1" category="ERRLEX" type="a" display-name="MEH [ERRLEX]"><event start="T46" end="T70">REG </event>
+<event start="T70" end="T68">CO </event>
+<event start="T67" end="T138">REG </event>
+<event start="T66" end="T64">ERRVCOFIN </event>
+<event start="T74" end="T72">ERRVCOFIN </event>
+<event start="T82" end="T102">REG </event>
+<event start="T90" end="T89">ERRKONZH2 </event>
+<event start="T111" end="T110">ERRPTKA </event>
+<event start="T103" end="T129">REG </event>
+</tier><tier id="TIE11" speaker="SPK1" category="ERRTXT" type="a" display-name="MEH [ERRTXT]"></tier><tier id="TIE14" speaker="SPK1" category="MIX" type="a" display-name="MEH [MIX]"><event start="T88" end="T119">LEXNINT </event>
+</tier><tier id="TIE15" speaker="SPK1" category="STANCE" type="a" display-name="MEH [STANCE]"><event start="T54" end="T51">MORo </event>
+<event start="T112" end="T129">MORc </event>
+</tier><tier id="TIE16" speaker="SPK1" category="FUNC" type="a" display-name="MEH [FUNC]"><event start="T54" end="T51">EVALo </event>
+<event start="T112" end="T129">ARGc </event>
+</tier><tier id="TIE0" speaker="SPK1" category="MODE" type="a" display-name="MEH [MODE]"><event start="T32" end="T16">DIAL1 </event>
+<event start="T56" end="T55">DIAL1 </event>
+</tier></basic-body>
+<tierformat-table><timeline-item-format show-every-nth-numbering="1" show-every-nth-absolute="1" absolute-time-format="time" miliseconds-digits="1"/><tier-format tierref="TIE9"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE8"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE7"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="COLUMN-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">7</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE6"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE5"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE4"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE3"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE2"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE1"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE0"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE16"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE15"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE14"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE13"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE12"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE11"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE10"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">9</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="SUB-ROW-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Right</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">8</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="ROW-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Bold</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">10</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="EMPTY-EDITOR"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">white</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">2</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="EMPTY"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">white</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">2</property><property name="font-name">Times New Roman</property></tier-format></tierformat-table></basic-transcription>
