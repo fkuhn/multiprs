@@ -3,6 +3,6 @@ language: python
   # maintainers to fix their pypy-dev package.a
 # command to install dependencies
 install:
-  - pip install .
+  - python setup.py -q install
 # command to run tests
 script: pytest
