@@ -1,6 +1,8 @@
 __author__ = 'kuhn'
 
 import argparse
+import sys
+
 
 def main():
 
@@ -18,3 +20,4 @@ def main():
     tag_turkish = subsubparsers.add_parser('tag', help='sub-command help')
     tag_turkish.add_argument('exmapath', action='append',  nargs=2, type=file, help='exmapath help')
 
+    args = parser.parse_args(sys.argv[1:])    
