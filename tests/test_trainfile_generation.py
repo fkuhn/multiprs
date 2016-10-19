@@ -6,6 +6,7 @@ import re
 import pytest
 import os
 
+<<<<<<< HEAD
 # Path to directory with manually pos tagged exb files
 germanExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Traingsdaten DE/"
 englishExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Trainingsdaten EN/"
@@ -97,6 +98,10 @@ turkish_brill_trainfile = "tt_trainingfile_TR.txt"
 #                 except UnicodeEncodeError:
 #                     print("unicode error in tuple {}".format(postuple))
 
+=======
+
+tdata = os.path.abspath("./tdata/")
+>>>>>>> 3480e95... reformatted test training file
 
 def test_german_traindata():
     """
@@ -110,6 +115,7 @@ def test_german_traindata():
         assert pos != None
 
 
+<<<<<<< HEAD
 def test_english_traindata():
     """
     this test runs to find non-parsed element-tiers in the exmaralda sources
@@ -124,6 +130,9 @@ def test_english_traindata():
 
 
 def test_german_v_tupels():
+=======
+def test_v_tupels():
+>>>>>>> 3480e95... reformatted test training file
     """
     Are all verbal tier tupels created without None values?
     :return:
@@ -155,6 +164,7 @@ def test_english_v_tupels():
             assert value != None
 
 
+<<<<<<< HEAD
 def test_german_pos_tupels():
     """
     Are all pos tier tupels created without None values?
@@ -171,6 +181,9 @@ def test_german_pos_tupels():
             assert value != None
 
 def test_english_pos_tupels():
+=======
+def test_pos_tupels():
+>>>>>>> 3480e95... reformatted test training file
     """
     Are all pos tier tupels created without None values?
     :return:
@@ -186,6 +199,7 @@ def test_english_pos_tupels():
             assert value != None
 
 
+<<<<<<< HEAD
 def test_german_tokenpos():
     trdata = corpustools.ExmaTokenPOSIterator(germanExmaraldaTrain)
     trfiles = {}
@@ -207,6 +221,10 @@ def test_german_tokenpos():
 
 def test_english_tokenpos():
     trdata = corpustools.ExmaTokenPOSIterator(englishExmaraldaTrain)
+=======
+def test_tokenpos():
+    trdata = corpustools.make_tier_tuple_list(tdata)
+>>>>>>> 3480e95... reformatted test training file
     trfiles = {}
 
     # check if trdata is iterable
@@ -222,6 +240,7 @@ def test_english_tokenpos():
                     tp.append((token[0], token[1], pos[1]))
         trfiles.update({fn: tp})
 
+<<<<<<< HEAD
     assert len(trfiles) == counter
 
 
@@ -230,3 +249,6 @@ def test_english_tokenpos():
 
 # assert create_tagger_trainingfile(englishExmaraldaTrain, english_tt_trainfile)
 
+=======
+    assert len(trfiles) == counter
+>>>>>>> 3480e95... reformatted test training file
