@@ -9,6 +9,8 @@ TAB = '\t'
 LBREAK = '\n'
 
 
+# logging.basicConfig(filename='../log/corpustools.log',level=logging.WARNING)
+
 def write_meta2exma(corpuspath):
     """
     writes metadata of a speaker to all
@@ -51,7 +53,8 @@ def timestamp_token_tupler(verbaltier):
     :returns timed_vlist: list
     """
     timed_vlist = list()
-
+    if verbaltier is None:
+        return None
     for velem in verbaltier:
         if velem is not None:
             try:
@@ -62,6 +65,7 @@ def timestamp_token_tupler(verbaltier):
                 print velem + " is not valid"
                 continue
     return timed_vlist
+
 
 
 class ExmaTimeStampTokenIterator(object):
@@ -112,7 +116,7 @@ class CorpusIterator(object):
             logging.error('Assertion Error. No Root: ' + file_name)
             return
 
-        vtier = extract_v_student(tree)
+        # vtier = extract_v_student(tree)
 
         return file_name, tree
 
@@ -162,6 +166,8 @@ class ExmaTokenPOSIterator(object):
 
         try:
             tree = etree.parse(os.path.join(self.corpus_path, file_name), parser=XML_PARSER)
+            if not hasattr(tree, '__iter__'):
+                return
         except AssertionError:
             logging.error('Assertion Error. No Root: ' + file_name)
             return
@@ -169,7 +175,49 @@ class ExmaTokenPOSIterator(object):
         vtier = extract_v_student(tree)
         postier = extract_pos_student(tree)
 
+        if vtier == None:
+            return
+        elif postier == None:
+            return
+
         return file_name, timestamp_token_tupler(vtier), timestamp_token_tupler(postier)
+
+
+
+def make_tier_tuple_list(resourcepath):
+    """
+    same funtionality liek ExmaTokenPOSIterator
+    but with using a simple list-returning function
+    :param resourcepath:
+    :return:
+    """
+    corpus_path = os.path.abspath(resourcepath)
+    file_names = os.listdir(corpus_path)
+    results = list()
+    for file_name in file_names:
+        try:
+            tree = etree.parse(os.path.join(corpus_path, file_name), parser=XML_PARSER)
+        except AssertionError:
+            logging.error('Assertion Error. No Root: ' + file_name)
+
+        vtier = extract_v_student(tree)
+        ptier = extract_pos_student(tree)
+
+        # results.update({file_name: (timestamp_token_tupler(vtier), timestamp_token_tupler(ptier))})
+
+        ts_vtier = timestamp_token_tupler(vtier)
+        ts_ptier = timestamp_token_tupler(ptier)
+
+        if ts_ptier == None:
+            continue
+        if ts_vtier == None:
+            continue
+
+        result = file_name, ts_vtier, ts_ptier
+        results.append(result)
+
+    return results
+
 
 
 
