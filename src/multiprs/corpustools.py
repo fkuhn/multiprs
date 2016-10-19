@@ -8,6 +8,7 @@ XML_PARSER = etree.XMLParser()
 TAB = '\t'
 LBREAK = '\n'
 
+
 logging.basicConfig(level=logging.WARNING)
 
 def write_meta2exma(corpuspath):
@@ -52,7 +53,8 @@ def timestamp_token_tupler(verbaltier):
     :returns timed_vlist: list
     """
     timed_vlist = list()
-
+    if verbaltier is None:
+        return None
     for velem in verbaltier:
         if velem is not None:
             try:
@@ -63,6 +65,7 @@ def timestamp_token_tupler(verbaltier):
                 print velem + " is not valid"
                 continue
     return timed_vlist
+
 
 
 class ExmaTimeStampTokenIterator(object):
@@ -163,12 +166,19 @@ class ExmaTokenPOSIterator(object):
 
         try:
             tree = etree.parse(os.path.join(self.corpus_path, file_name), parser=XML_PARSER)
+            if not hasattr(tree, '__iter__'):
+                return
         except AssertionError:
             logging.error('Assertion Error. No Root: ' + file_name)
             return
 
         vtier = extract_v_student(tree)
         postier = extract_pos_student(tree)
+
+        if vtier == None:
+            return
+        elif postier == None:
+            return
 
         return file_name, timestamp_token_tupler(vtier), timestamp_token_tupler(postier)
 
