@@ -6,8 +6,7 @@ import re
 import pytest
 import os
 
-
-tdata = os.path.abspath("./tdata/")
+tdata = os.path.abspath("tdata/")
 
 def test_traindata():
     """
