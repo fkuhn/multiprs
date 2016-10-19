@@ -7,15 +7,9 @@ import pytest
 import os
 
 # Path to directory with manually pos tagged exb files
-germanExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Traingsdaten_DE/"
-englishExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Trainingsdaten_EN/"
-turkishExmaraldaTrain = "/home/kuhn/ownCloud/2multilit/Data/Training/Trainingsdaten_TR/Block1-5"
-# Path to directory to exb files without pos tags 
 
-# Path to directory to write finalized training files to
-german_tt_trainfile = "tt_trainingfile_DE.txt"
-english_tt_trainfile = "tt_trainingfile_EN.txt"
-turkish_brill_trainfile = "tt_trainingfile_TR.txt"
+tdata = os.path.abspath("./tdata/")
+# Path to directory to exb files without pos tags 
 
 # def tokenpos(trdata):
 #     trfiles = {}
@@ -98,39 +92,26 @@ turkish_brill_trainfile = "tt_trainingfile_TR.txt"
 #                     print("unicode error in tuple {}".format(postuple))
 
 
-def test_german_traindata():
+def test_traindata():
     """
     this test runs to find non-parsed element-tiers in the exmaralda sources
     :return:
     """
-    traindata_iterator = corpustools.make_tier_tuple_list(germanExmaraldaTrain)
+    traindata_iterator = corpustools.make_tier_tuple_list(tdata)
     for fname, token, pos in traindata_iterator:
         assert fname != None
         assert token != None
         assert pos != None
 
 
-def test_english_traindata():
-    """
-    this test runs to find non-parsed element-tiers in the exmaralda sources
-    :return:
-    """
-    traindata_iterator = corpustools.make_tier_tuple_list(englishExmaraldaTrain)
-
-    assert hasattr(traindata_iterator, '__iter__') == True
-
-    for fname, token, pos in traindata_iterator:
-        assert fname != None
-        assert token != None
-        assert pos != None
 
 
-def test_german_v_tupels():
+def test_v_tupels():
     """
     Are all verbal tier tupels created without None values?
     :return:
     """
-    traindata_iterator = corpustools.make_tier_tuple_list(germanExmaraldaTrain)
+    traindata_iterator = corpustools.make_tier_tuple_list(tdata)
     tlist = [(fname, v_tupels, pos_tupels) for fname, v_tupels, pos_tupels in traindata_iterator]
 
     for fname, v_tupels, pos_tupels in tlist:
@@ -143,29 +124,13 @@ def test_german_v_tupels():
             assert value != None
 
 
-def test_english_v_tupels():
-    """
-    Are all verbal tier tupels created without None values?
-    :return:
-    """
-    traindata_iterator = corpustools.make_tier_tuple_list(englishExmaraldaTrain)
-    tlist = [(fname, v_tupels, pos_tupels) for fname, v_tupels, pos_tupels in traindata_iterator]
-    for fname, v_tupels, pos_tupels in tlist:
 
-        assert len(v_tupels) > 1
-        for tupel in v_tupels:
-            timestamp = tupel[0]
-            value = tupel[1]
-            assert timestamp != None
-            assert value != None
-
-
-def test_german_pos_tupels():
+def test_pos_tupels():
     """
     Are all pos tier tupels created without None values?
     :return:
     """
-    traindata_iterator = corpustools.make_tier_tuple_list(germanExmaraldaTrain)
+    traindata_iterator = corpustools.make_tier_tuple_list(tdata)
     for fname, v_tupels, pos_tupels in traindata_iterator:
 
         assert len(pos_tupels) > 1
@@ -175,24 +140,8 @@ def test_german_pos_tupels():
             assert timestamp != None
             assert value != None
 
-def test_english_pos_tupels():
-    """
-    Are all pos tier tupels created without None values?
-    :return:
-    """
-    traindata_iterator = corpustools.make_tier_tuple_list(englishExmaraldaTrain)
-    for fname, v_tupels, pos_tupels in traindata_iterator:
-
-        assert len(pos_tupels) > 1
-        for tupel in pos_tupels:
-            timestamp = tupel[0]
-            value = tupel[1]
-            assert timestamp != None
-            assert value != None
-
-
-def test_german_tokenpos():
-    trdata = corpustools.make_tier_tuple_list(germanExmaraldaTrain)
+def test_tokenpos():
+    trdata = corpustools.make_tier_tuple_list(tdata)
     trfiles = {}
 
     # check if trdata is iterable
@@ -210,22 +159,5 @@ def test_german_tokenpos():
 
     assert len(trfiles) == counter
 
-def test_english_tokenpos():
-    trdata = corpustools.make_tier_tuple_list(englishExmaraldaTrain)
-    trfiles = {}
 
-    # check if trdata is iterable
-    assert hasattr(trdata, '__iter__')
-    counter = 0
-    for fn, t, p in trdata:
-        counter += 1
-        tp = []
-
-        for token in t:
-            for pos in p:
-                if token[0] == pos[0]:
-                    tp.append((token[0], token[1], pos[1]))
-        trfiles.update({fn: tp})
-
-    assert len(trfiles) == counter
 
