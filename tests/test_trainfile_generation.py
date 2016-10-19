@@ -9,7 +9,6 @@ import os
 # path for travis
 tdata = os.path.abspath("tests/tdata/")
 
-
 def test_traindata():
     """
     this test runs to find non-parsed element-tiers in the exmaralda sources
