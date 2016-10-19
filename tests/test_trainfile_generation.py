@@ -19,7 +19,6 @@ def test_traindata():
         assert token != None
         assert pos != None
 
-
 def test_v_tupels():
     """
     Are all verbal tier tupels created without None values?
