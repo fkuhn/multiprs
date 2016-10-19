@@ -1,35 +1,14 @@
 # Multiprs 
 [![Build Status](https://travis-ci.org/fkuhn/multiprs.svg?branch=master)](https://travis-ci.org/fkuhn/multiprs)
-Multiprs is a command-line toolkit for pos-tagging and meta-data enrichment of exmaralda-files.
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)   
+
+
+Multiprs is a python package for pos-tagging and meta-data enrichment of exmaralda-files for the [Multilit](http://www.uni-potsdam.de/daf/projekte/multilit.html)
+ project 
 
 ## Installation
 
 sudo setup.py install 
 
 ## How To 
-wip
-
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2015 Florian Kuhn
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+Jupyter notebooks on how to apply the package will soon be added.
