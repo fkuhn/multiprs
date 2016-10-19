@@ -1,5 +1,6 @@
 # Multiprs 
 [![Build Status](https://travis-ci.org/fkuhn/multiprs.svg?branch=master)](https://travis-ci.org/fkuhn/multiprs)
+[![Documentation Status](https://readthedocs.org/projects/multiprs/badge/?version=latest)](http://multiprs.readthedocs.io/en/latest/?badge=latest)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)   
 
 
