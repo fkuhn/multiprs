@@ -16,24 +16,24 @@ install_requires = [
 ]
 setup(
     name="multiprs",
-    version="0.2",
+    version="0.3",
     author="Florian Kuhn",
-    author_email="zeichenkette@gmail.com",
+    author_email = "kuhn@ids-mannheim.de",
     description = ("tagging and metadata alignment for multilit"),
     license = "MIT",
     keywords = "tagging parsing corpus",
-    url="https://testpypi.python.org/pypi/multiprs/",
+    url = "http://packages.python.org/an_example_pypi_project",
     packages=find_packages('src'),
     package_dir = {'': 'src'}, include_package_data=True,
     long_description=read('README.md'),
     classifiers=[
-        "Development Status :: 2 - Alpha",
+        "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
         "License :: OSI Approved :: MIT License",
     ],
-    install_requires=install_requires
-    # entry_points={
-    #    'console_scripts':
-    #        ['multiprs=multiprs:main']
-    # }
+    install_requires=install_requires,
+    entry_points={
+        'console_scripts':
+            ['multiprs=multiprs.multiprs:main']
+    }
 )
