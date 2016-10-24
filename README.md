@@ -14,5 +14,6 @@ Multiprs is a python package for pos-tagging and meta-data enrichment of exmaral
 
 `sudo python setup.py install` 
 
-## How To 
-Jupyter notebooks on how to apply the package will soon be added.
+## To Do
+ - Jupyter notebooks on how to apply the package will soon be added.
+ - I will add cli functionality
