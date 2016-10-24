@@ -27,7 +27,7 @@ def extract_v_student(documenttree):
     """
     vtier = None
     for element in documenttree.iter('tier'):
-        if len(element.get('display-name').split()[0]) >= 3 and element.get('category') == 'v':
+        if len(element.get('display-name').split()[0]) >= 3 and element.get('category').lower() == 'v':
             vtier = element
     return vtier
 
@@ -39,7 +39,7 @@ def extract_pos_student(documenttree):
     """
     postier = None
     for element in documenttree.iter('tier'):
-        if len(element.get('display-name').split()[0]) >= 3 and element.get('category') == 'POS':
+        if len(element.get('display-name').split()[0]) >= 3 and element.get('category').lower() == 'pos':
             postier = element
 
     return postier
