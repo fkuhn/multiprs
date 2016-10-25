@@ -175,9 +175,9 @@ class ExmaTokenPOSIterator(object):
         vtier = extract_v_student(tree)
         postier = extract_pos_student(tree)
 
-        if vtier == None:
+        if vtier is None:
             return
-        elif postier == None:
+        elif postier is None:
             return
 
         return file_name, timestamp_token_tupler(vtier), timestamp_token_tupler(postier)
@@ -208,10 +208,10 @@ def make_tier_tuple_list(resourcepath):
         ts_vtier = timestamp_token_tupler(vtier)
         ts_ptier = timestamp_token_tupler(ptier)
 
-        if ts_ptier == None:
+        if ts_ptier is None:
             logging.warning('Skipping file...{} No pos tier parsed'.format(file_name))
             continue
-        if ts_vtier == None:
+        if ts_vtier is None:
             logging.warning('Skipping file...{} No verbal tier parsed'.format(file_name))
             continue
 
