@@ -4,7 +4,7 @@
 
 Master: [![Build Status](https://travis-ci.org/fkuhn/multiprs.svg?branch=master)](https://travis-ci.org/fkuhn/multiprs)
 Dev: [![Build Status](https://travis-ci.org/fkuhn/multiprs.svg?branch=dev)](https://travis-ci.org/fkuhn/multiprs)
-
+[![codecov](https://codecov.io/gh/fkuhn/multiprs/branch/master/graph/badge.svg)](https://codecov.io/gh/fkuhn/multiprs)
 
 
 Multiprs is a python package for pos-tagging and meta-data enrichment of exmaralda-files for the [Multilit](http://www.uni-potsdam.de/daf/projekte/multilit.html)
