@@ -209,10 +209,10 @@ def make_tier_tuple_list(resourcepath):
         ts_ptier = timestamp_token_tupler(ptier)
 
         if ts_ptier == None:
-            logging.warning('Skipping file...{} No pos tier parsed'.format(file_name))
+            logging.warning('Skipping file...{0} No pos tier parsed'.format(file_name))
             continue
         if ts_vtier == None:
-            logging.warning('Skipping file...{} No verbal tier parsed'.format(file_name))
+            logging.warning('Skipping file...{0} No verbal tier parsed'.format(file_name))
             continue
 
         result = file_name, ts_vtier, ts_ptier
@@ -241,7 +241,7 @@ class ExmaTrainData(object):
 
         for filename, tokens, poses in self._tokenpositer:
             for tokenpos in tokens, poses:
-                data.append('{}{}{}{}'.format(tokenpos[1], TAB, tokenpos[1], LBREAK))
+                data.append('{0}{1}{2}{3}'.format(tokenpos[1], TAB, tokenpos[1], LBREAK))
         textstring = ''.join(data)
 
         return textstring
