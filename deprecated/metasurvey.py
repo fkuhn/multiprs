@@ -29,7 +29,9 @@ class Survey:
 class Entr: y
 
 
-def __init__(self, ck=None, data=[]):
+def __init__(self, ck=None, data=None):
+    if data is None:
+        data = []
     self.corpuskey = ck
     self.data = data
     return
