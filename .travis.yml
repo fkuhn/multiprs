@@ -6,9 +6,11 @@ python:
 # command to install dependencies
 
 install:
+  - pip install codecov pytest-cov
   - python setup.py install
 # command to run tests
-script: py.test
+script: 
+  - py.test --cov=./
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - codecov
