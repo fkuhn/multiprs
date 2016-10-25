@@ -90,7 +90,7 @@ class MetaTableSpeakers(object):
                             udspeaker = infile_speaker.find('ud-speaker-information')
                             udinfo = etree.SubElement(udspeaker, "ud-information")
                             udinfo.set("attribute-name", key)
-                            udinfo.text = "{}".format(value)
+                            udinfo.text = "{0}".format(value)
                 output = etree.tostring(exmatree)
                 with open(os.path.join(outputpath, filename), 'w') as out:
                     out.write(output)
