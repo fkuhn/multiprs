@@ -16,9 +16,9 @@ def test_traindata():
     """
     traindata_iterator = corpustools.make_tier_tuple_list(tdata)
     for fname, token, pos in traindata_iterator:
-        assert fname != None
-        assert token != None
-        assert pos != None
+        assert fname is not None
+        assert token is not None
+        assert pos is not None
 
 def test_v_tupels():
     """
@@ -33,8 +33,8 @@ def test_v_tupels():
         for tupel in v_tupels:
             timestamp = tupel[0]
             value = tupel[1]
-            assert timestamp != None
-            assert value != None
+            assert timestamp is not None
+            assert value is not None
 
 
 def test_pos_tupels():
@@ -49,8 +49,8 @@ def test_pos_tupels():
         for tupel in pos_tupels:
             timestamp = tupel[0]
             value = tupel[1]
-            assert timestamp != None
-            assert value != None
+            assert timestamp is not None
+            assert value is not None
 
 
 def test_tokenpos():

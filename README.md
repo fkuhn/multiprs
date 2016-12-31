@@ -4,15 +4,16 @@
 
 Master: [![Build Status](https://travis-ci.org/fkuhn/multiprs.svg?branch=master)](https://travis-ci.org/fkuhn/multiprs)
 Dev: [![Build Status](https://travis-ci.org/fkuhn/multiprs.svg?branch=dev)](https://travis-ci.org/fkuhn/multiprs)
-
-
+[![codecov](https://codecov.io/gh/fkuhn/multiprs/branch/master/graph/badge.svg)](https://codecov.io/gh/fkuhn/multiprs)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/9f595640663245d59c175e808b2fb0d6/badge.svg)](https://www.quantifiedcode.com/app/project/9f595640663245d59c175e808b2fb0d6)
 
 Multiprs is a python package for pos-tagging and meta-data enrichment of exmaralda-files for the [Multilit](http://www.uni-potsdam.de/daf/projekte/multilit.html)
  project 
 
 ## Installation
 
-sudo setup.py install 
+`sudo python setup.py install` 
 
-## How To 
-Jupyter notebooks on how to apply the package will soon be added.
+## To Do
+ - Jupyter notebooks on how to apply the package will soon be added.
+ - I will add cli functionality

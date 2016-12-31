@@ -1,23 +1,45 @@
-__author__ = 'kuhn'
-
 import argparse
 import sys
+import os
+import yaml
+
+# top level parser
+parser = argparse.ArgumentParser(prog='multiprs', usage='%(prog)s [options]')
+subparsers = parser.add_subparsers(prog='train', help='sub-command help')
+parser.add_argument('language', choices=['tr', 'de', 'en'], help='language to tag exb files from: tr, de, en')
+parser.add_argument('filepath', help='filepath to exmaralda file')
+parser.add_argument('outputfile', help='filepath to outputfile')
+
+# create option for a config.yml
 
 
 def main():
 
-    # top level parser
-    parser = argparse.ArgumentParser(prog='multiprs', usage='%(prog)s [options]')
-    subparsers = parser.add_subparsers(help='sub-command help')
+    args = parser.parse_args()
 
-    # sub parsers for 'turkish', 'english, 'german'  command
-    parser_turkish = subparsers.add_parser('turkish', help='compare help')
-    parser_german = subparsers.add_parser('german', help='compare help')
-    parser_english = subparsers.add_parser('english', help='compare help')
+    if args.language == 'tr':
+        parse_turkish(args)
+    elif args.language == 'de':
+        parse_german()
+    elif args.language == 'en':
+        parse_english()
 
-    # parser
-    subsubparsers = parser_turkish.add_subparsers(help='sub-command help')
-    tag_turkish = subsubparsers.add_parser('tag', help='sub-command help')
-    tag_turkish.add_argument('exmapath', action='append',  nargs=2, type=file, help='exmapath help')
 
-    args = parser.parse_args(sys.argv[1:])    
+def parse_turkish(args):
+    print args.filepath
+
+
+def parse_german():
+    pass
+
+
+def parse_english():
+    pass
+
+
+def train_paramterfile():
+    pass
+
+
+if __name__ == '__main__':
+    main()
