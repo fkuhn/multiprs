@@ -1,6 +1,20 @@
-train-treetagger:
-openclass:
+%configuration for a training setup for
+traintreetagger: "test-train"
 
+lexicon_ger: "lexiconpath"
+openclass_ger: "../data/openclass/open_German.class"
+traindata_ger: "trainingdatapath"
+ouputpath_ger:
+
+lexicon_en: "lec"
+openclass_en: "test"
+traindata_en: "trainingdatapath"
+outputpath_en:
+
+traintreetagger_tr: "test-train"
+openclass_tr: "test"
+traindata_tr: "trainingdatapath"
+outputpath_tr: ""
 
 
 
