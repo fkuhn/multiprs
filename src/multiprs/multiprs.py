@@ -40,6 +40,5 @@ def parse_english():
 def train_paramterfile():
     pass
 
-
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#    main()

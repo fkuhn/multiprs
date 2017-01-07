@@ -34,7 +34,7 @@ def extract_v_student(documenttree):
 
 def extract_pos_student(documenttree):
     """
-    :param documenttree: etree object
+    :param documenttree: etree object 
     :returns postier exmaralda tier
     """
     postier = None
@@ -119,6 +119,7 @@ class CorpusIterator(object):
         vtier = extract_v_student(tree)
 
         return file_name, tree
+
 
 class CorpusIteratorVTier(object):
     """

@@ -16,4 +16,14 @@ Multiprs is a python package for pos-tagging and meta-data enrichment of exmaral
 
 ## To Do
  - Jupyter notebooks on how to apply the package will soon be added.
- - I will add cli functionality
+
+
+## Tutorials and Documentation on Treetagger
+http://ling.uni-konstanz.de/pages/home/zinsmeister/CorpLing10/Material/Handout_treetagger.pdf
+
+https://github.com/ai-ku/tr-en-edu/tree/master/src/tree-tagger
+
+https://mattwilkens.com/2008/12/06/evaluating-pos-taggers-treetagger-training-troubles/
+
+http://kitt.cl.uzh.ch/clab/tagging/tag.pdf
+

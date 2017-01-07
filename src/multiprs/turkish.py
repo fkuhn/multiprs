@@ -1,4 +1,4 @@
-import treetaggerwrapper
+# import treetaggerwrapper
 import corpustools
 import os
 import argparse
